@@ -6,6 +6,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../assets/main.css">
         <link rel="stylesheet" href="../assets/bootstrap/bootstrap-iso.css" type="text/css">
+        <link rel="stylesheet" href="../assets/owl-carousel/owl.carousel.min.css" type="text/css">
+
+
+        <script src="../js/jquery.min.js"></script>
+        <script src="../assets/owl-carousel/owl.carousel.min.js"></script>
+
     </head>
     <body>
 
@@ -165,9 +171,22 @@
 جدیدترین عناوین
                         </h3>
                     </div>
-
-
-
+                    <div class="carousel_wrapper bootstrap-iso">
+                        <div class="owl-carousel bootstrap-iso">
+                            <div> <img src="../media/main/slider/frozen.jpg" alt="Owl Image"> </div>
+                            <div> <img src="../media/main/slider/grandpa.jpg" alt="Owl Image"> </div>
+                            <div> Your Content3 </div>
+                            <div> Your Content4 </div>
+                            <div> Your Content5 </div>
+                            <div> Your Content6 </div>
+                            <div> Your Content7 </div>
+                        </div>
+                        <script>
+                            $(document).ready(function(){
+                                $(".owl-carousel").owlCarousel();
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>

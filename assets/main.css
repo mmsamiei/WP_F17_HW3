@@ -265,6 +265,16 @@ a, a:visited{
     height: 100%;
 }
 
+.black_container .carousel_container .carousel_wrapper{
+    background: red;
+    height: 40px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
 
 
 /* end of middle div */
