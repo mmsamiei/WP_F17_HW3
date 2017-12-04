@@ -1,14 +1,25 @@
 
 $(document).ready(function(){
-    $(".owl-carousel").owlCarousel({
+    let owl = $(".owl-carousel");
+    owl.owlCarousel({
 
         autoplay: true,
         autoplayTimeout: 2000,
-        nav: true,
         autoplayHoverPause: true,
-        items : 5,
+        items : 6,
         itemsDesktop : [1199,3],
         itemsDesktopSmall : [979,3],
         rtl: true
     });
+    let mamad = document.getElementsByClassName("angle-point-to-right")[0];
+    let mahdi = document.getElementsByClassName("angle-point-to-left")[0];
+    mamad.onclick = function (e) {
+        console.log("mamad 1");
+        owl.trigger('prev.owl.carousel');
+    };
+    mahdi.onclick = function (e) {
+        console.log("mamad 1");
+        owl.trigger('next.owl.carousel');
+    };
 });
+

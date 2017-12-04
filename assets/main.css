@@ -270,12 +270,36 @@ a, a:visited{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.carousel_wrapper .owl-carousel img{
-
+.angle-point-to-left{
+    width: 50px;
+    height: auto;
+    cursor: pointer;
 }
 
+.angle-point-to-right{
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+.owl-carousel{
+    width: 90%;
+}
+
+.owl-carousel .item{
+    margin: 10px;
+}
+.owl-carousel .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 
 /* end of middle div */
