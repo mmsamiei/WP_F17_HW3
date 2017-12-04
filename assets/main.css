@@ -267,10 +267,13 @@ a, a:visited{
 
 .black_container .carousel_container .carousel_wrapper{
     background: red;
-    height: 40px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+}
+
+.carousel_wrapper .owl-carousel img{
+
 }
 
 
@@ -434,6 +437,10 @@ a, a:visited{
     margin-bottom: 5px;
     height: 20px;
     position: absolute;
+}
+
+a:hover{
+	text-decoration : none;
 }
 
 /* end of footer */

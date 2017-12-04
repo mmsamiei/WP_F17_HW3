@@ -1,0 +1,18 @@
+{
+  "name": "F96-HW-3",
+  "homepage": "https://github.com/mmsamiei/WP_F17_HW3",
+  "authors": [
+    "mmsamiei"
+  ],
+  "description": "wow",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
