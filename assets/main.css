@@ -266,7 +266,6 @@ a, a:visited{
 }
 
 .black_container .carousel_container .carousel_wrapper{
-    background: red;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
@@ -274,22 +273,26 @@ a, a:visited{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .angle-point-to-left{
-    width: 50px;
+    /*width: 50px;*/
+    width: 5%;
     height: auto;
     cursor: pointer;
 }
 
 .angle-point-to-right{
-    width: 50px;
+    /*width: 50px;*/
+    width: 5%;
     height: auto;
     cursor: pointer;
 }
 
 .owl-carousel{
     width: 90%;
+    flex: auto;
 }
 
 .owl-carousel .item{
