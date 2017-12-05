@@ -87,10 +87,20 @@ $(document).ready(function(){
         url = "http://www.omdbapi.com/?t="+films[i].title+"&apikey="+omdbapi_key+"&plot=full";
 
         $.get(url).done(function (object){
-            let content = '<div class="item"> <img src='+object["Poster"]+'alt="Owl Image"> </div>';
+            let new_img = document.createElement("img");
+            new_img.setAttribute("src",object["Poster"]);
+            let div_of_img = document.createElement("div");
+            div_of_img.className = "item";
+            div_of_img.appendChild(new_img);
             $('#owl-carousel-father-div')
-                .owlCarousel('add', content)
-                .owlCarousel('update')
+                 .owlCarousel('add', div_of_img)
+                 .owlCarousel('update')
+
+
+            // let content = '<div class="item"> <img src='+object["Poster"]+'alt="Owl Image"> </div>';
+            // $('#owl-carousel-father-div')
+            //     .owlCarousel('add', content)
+            //     .owlCarousel('update')
 
         });
 
