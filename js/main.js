@@ -53,30 +53,44 @@ $(document).ready(function(){
         {
             title:"Captain America: Civil War",
             year: 2016
+        },
+        {
+            title:"The Avengers",
+            year: 2012
+        },
+        {
+            title:"Captain America: The First Avenger",
+            year: 2011
+        },
+        {
+            title:"Avengers: Age of Ultron",
+            year: 2015
+        },
+        {
+            title:"A Beautiful Mind",
+            year: 2001
+        },
+        {
+            title:"imitation game",
+            year: 2014
         }
 
     ];
 
     for (let i=0;i<films.length ;i++){
-        console.log(JSON.stringify(films[i]))
-        console.log(films[i].title)
 
-        // let xhttp = new XMLHttpRequest();
-        // xhttp.open("GET", "http://www.theimdbapi.org/api/find/movie?title="+films[i].title+"&year="+films[i].year, false);
-        // xhttp.send();
-        // let response = JSON.parse(xhttp.responseText);
+        //url for theimdb api
+        // url = "http://www.theimdbapi.org/api/find/movie?title="+films[i].title+"&year="+films[i].year;
 
-        let content = '<div class="item"> <img src='+'https://images-na.ssl-images-amazon.com/images/M/MV5BNDg1NTU2OWEtM2UzYi00ZWRmLWEwMTktZWNjYWQ1NWM1OThjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg'+'alt="Owl Image"> </div>'
-        // let owl = $("#owl-carousel-father-div");
-        $('#owl-carousel-father-div')
-            .owlCarousel('add', content)
-            .owlCarousel('update')
-        // owl.append(content);
+        omdbapi_key = "9d16e1f7";
+        // url for omdbapi
+        url = "http://www.omdbapi.com/?t="+films[i].title+"&apikey="+omdbapi_key+"&plot=full";
 
-        url = "http://www.theimdbapi.org/api/find/movie?title="+films[i].title+"&year="+films[i].year;
         $.get(url).done(function (object){
-            // console.log(object[0]["poster"]["thumb"]);
-            let content = '<div class="item"> <img src='+'https://images-na.ssl-images-amazon.com/images/M/MV5BNDg1NTU2OWEtM2UzYi00ZWRmLWEwMTktZWNjYWQ1NWM1OThjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg'+'alt="Owl Image"> </div>'
+            let content = '<div class="item"> <img src='+object["Poster"]+'alt="Owl Image"> </div>';
+            $('#owl-carousel-father-div')
+                .owlCarousel('add', content)
+                .owlCarousel('update')
 
         });
 
