@@ -257,6 +257,18 @@ a, a:visited{
     padding-right: 10px;
     font-size: 17px;
     color: white;
+    cursor: pointer;
+}
+
+li.active span {
+    color: #D0D0D0;
+    border-color: #D0D0D0;
+    background: #707070;
+    border: 1px solid transparent;
+    padding: 2px 10px;
+    border-radius: 6px;
+    display: block;
+    border: 1px solid;
 }
 
 .black_container .carousel_container .carousel_row h3{
