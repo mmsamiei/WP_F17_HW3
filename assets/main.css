@@ -310,9 +310,20 @@ li.active span {
 .owl-carousel .item{
     margin: 10px;
 }
+
+.owl-carousel .item:hover{
+    margin: 5px;
+}
+
 .owl-carousel .item img{
     display: block;
     width: 100%;
+    height: auto;
+}
+
+.owl-carousel .item img:hover{
+    opacity: 0.5;
+    cursor: pointer;
     height: auto;
 }
 

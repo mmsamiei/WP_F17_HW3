@@ -1,3 +1,15 @@
+
+function click_image(object){
+    console.log(object);
+    var newWindow = window.open('./download.html');
+    newWindow.film_json = object;
+}
+
+function mouse_over_image() {
+
+}
+
+
 $(document).ready(function(){
     let owl = $("#owl-carousel-father-div");
     owl.owlCarousel({
@@ -94,8 +106,12 @@ $(document).ready(function(){
             div_of_img.appendChild(new_img);
             $('#owl-carousel-father-div')
                  .owlCarousel('add', div_of_img)
-                 .owlCarousel('update')
+                 .owlCarousel('update');
 
+            div_of_img.addEventListener("click", function () {
+                click_image(object);
+            });
+            div_of_img.onmouseover = mouse_over_image;
 
             // let content = '<div class="item"> <img src='+object["Poster"]+'alt="Owl Image"> </div>';
             // $('#owl-carousel-father-div')

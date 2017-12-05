@@ -10,5 +10,9 @@ Add/Remove Items to OwlCarousel
 
 https://github.com/OwlCarousel2/OwlCarousel2/issues/339
 
+quickest way to pass data to a popup window i created using window open
+
+https://stackoverflow.com/questions/1830347/quickest-way-to-pass-data-to-a-popup-window-i-created-using-window-open
+
 ## Important Point!
 jquery must has been linked before OWL!!!
