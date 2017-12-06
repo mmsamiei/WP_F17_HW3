@@ -20,6 +20,8 @@ $(document).ready(function(){
     url = "http://www.omdbapi.com/?i="+imdbid+"&apikey="+omdbapi_key+"&plot=full";
     $.get(url).done(function (object){
 
+        let film_title_header = $('.film_title_div>h1').get(0);
+        film_title_header.innerHTML="دانلود فیلم "+object["Title"];
         let cover_div = document.getElementsByClassName("cover")[0];
         let img = cover_div.getElementsByTagName("img")[0];
         img.src=object["Poster"];
