@@ -1,8 +1,7 @@
 
 function click_image(object){
     console.log(object);
-    var newWindow = window.open('./download.html');
-    newWindow.film_json = object;
+    var newWindow = window.open('./download.html?id='+object["imdbID"]);
 }
 
 function mouse_over_image() {
