@@ -49,5 +49,31 @@ $(document).ready(function(){
         film_directors_span.innerHTML = object["Director"];
 
 
+
+        let film_writer_div = $('div.writer').get(0);
+        let writers = object["Writer"].split(",");
+        for(let i=0;i<writers.length;i++){
+            if(i!=0){
+                film_writer_div.append(' و ')
+            }
+            let writer_span=document.createElement("span");
+            writer_span.innerHTML=writers[i].replace(/ *\([^)]*\) */g, "");
+            film_writer_div.append(writer_span);
+        }
+
+
+        let film_actor_div = $('div.actor').get(0);
+        let actors = object["Actors"].split(",");
+        for(let i=0;i<actors.length;i++){
+            if(i!=0){
+                film_actor_div.append(' و ')
+            }
+            let actor_span=document.createElement("span");
+            actor_span.innerHTML=actors[i];
+            film_actor_div.append(actor_span);
+        }
+
+
+
     });
 });
