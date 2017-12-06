@@ -330,10 +330,10 @@ a, a:visited{
 .film_description_div{
     background: blueviolet   ;
     min-height: 500px;
+    overflow:hidden
 }
 
 .film_description_div>.container>.row{
-    background: red;
 }
 
 .cover{
