@@ -308,7 +308,6 @@ a, a:visited{
 
 /* FILM INFORMATION DIV*/
 .film_information_div{
-    min-height: 500px;
     background: #f29a28;
 
 }
@@ -330,12 +329,24 @@ a, a:visited{
 
 .film_description_div{
     background: blueviolet   ;
+    min-height: 500px;
 }
 
 .film_description_div>.container>.row{
     background: red;
 }
 
+.cover{
+    margin-top: -40px;
+}
+
+.cover img{
+    height: auto;
+    width: auto;
+}
+
+.cover_txt{
+}
 
 /* END OF INFORMATION DIV*/
 
