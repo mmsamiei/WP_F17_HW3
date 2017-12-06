@@ -33,5 +33,21 @@ $(document).ready(function(){
         let film_year_span = document.getElementsByClassName("film_year")[0];
         film_year_span.innerHTML = object["Year"];
 
+        let film_languages_span = document.getElementsByClassName("film_languages")[0];
+        film_languages_span.innerHTML = object["Language"];
+
+        let film_mpaa_span = document.getElementsByClassName("mpaa")[0];
+        film_mpaa_span.innerHTML = object["Rated"];
+
+        let film_countries_span = document.getElementsByClassName("countries")[0];
+        film_countries_span.innerHTML = object["Country"];
+
+        let film_story_div = document.getElementsByClassName("story")[0];
+        film_story_div.innerHTML = object["Plot"];
+
+        let film_directors_span = $('span.director').get(0);
+        film_directors_span.innerHTML = object["Director"];
+
+
     });
 });
