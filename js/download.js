@@ -19,6 +19,8 @@ $(document).ready(function(){
     // url for omdbapi
     url = "http://www.omdbapi.com/?i="+imdbid+"&apikey="+omdbapi_key+"&plot=full";
     $.get(url).done(function (object){
-
+        let cover_div = document.getElementsByClassName("cover")[0];
+        let img = cover_div.getElementsByTagName("img")[0];
+        img.src=object["Poster"];
     });
 });
