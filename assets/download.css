@@ -252,12 +252,12 @@ a, a:visited{
 /*!*position: relative;*!*/
 /*}*/
 
-#navigtion_bar{
+#my_navigtion_bar{
     background-color: #F4F4F4;
     position: relative;
 }
 
-#navigation_bar_container{
+#my_navigation_bar_container{
     max-width: 1170px;
     /*width: 1170px;*/
     min-height: 50px;
@@ -265,7 +265,7 @@ a, a:visited{
     margin-left: auto;
 }
 
-#navigation_bar_list{
+#my_navigation_bar_list{
     margin-top: 2px;
     display: inline-block;
     vertical-align: middle;
@@ -299,6 +299,7 @@ a, a:visited{
 .menu_item a span{
     content: "\e93a";
 }
+
 
 /* end of navigation */
 /* Main*/
@@ -1105,3 +1106,7 @@ a, a:visited{
 
 /* end of footer */
 
+a:hover{
+
+    text-decoration : none;
+}

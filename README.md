@@ -16,3 +16,5 @@ https://github.com/OwlCarousel2/OwlCarousel2/issues/339
 
 ## Important Point!
 jquery must has been linked before OWL!!!
+
+if you have two style A and B and in ***<head>*** of your html file include A sooner than B then B is more important than A. ( if i know what i mean! :\)
