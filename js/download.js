@@ -8,13 +8,28 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-
+function clickTab(clicked_tab){
+    $(clicked_tab).addClass("active_item");
+    $(clicked_tab).siblings().removeClass("active_item")
+    $('.content').get()[0].innerHTML="";
+}
 
 $(document).ready(function(){
 
 
     let imdbid = getParameterByName('id');
     console.log(imdbid)
+
+
+    let tabs_a = $('.movie-tabs-div').find('li');
+    for(let i=0;i<tabs_a.length;i++){
+        tabs_a[i].addEventListener("click",function () {
+            clickTab(this);
+        });
+    }
+
+
+
     omdbapi_key = "9d16e1f7";
     // url for omdbapi
     url = "http://www.omdbapi.com/?i="+imdbid+"&apikey="+omdbapi_key+"&plot=full";
@@ -36,7 +51,17 @@ $(document).ready(function(){
         film_year_span.innerHTML = object["Year"];
 
         let film_languages_span = document.getElementsByClassName("film_languages")[0];
-        film_languages_span.innerHTML = object["Language"];
+
+        let language = object["Language"].split(",");
+        for(let i=0;i<language.length;i++){
+            if(i!=0){
+                film_languages_span.append(' و ')
+            }
+            let language_span=document.createElement("span");
+            language_span.innerHTML=language[i];
+            film_languages_span.append(language_span);
+        }
+
 
         let film_mpaa_span = document.getElementsByClassName("mpaa")[0];
         film_mpaa_span.innerHTML = object["Rated"];
@@ -56,7 +81,7 @@ $(document).ready(function(){
 
 
         let film_story_div = document.getElementsByClassName("story")[0];
-        film_story_div.innerHTML = object["Plot"];
+        film_story_div.innerHTML = "خلاصه داستان: " + object["Plot"];
 
         let film_directors_span = $('span.director').get(0);
         film_directors_span.innerHTML = object["Director"];
