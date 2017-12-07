@@ -337,16 +337,44 @@ a, a:visited{
 }
 
 .cover{
-    margin-top: -40px;
+    margin-top: -50px;
     display: table-row;
 }
 
 .cover img{
     height: auto;
     width: auto;
+    border: 20px solid blueviolet;
+
 }
 
 .cover_txt{
+}
+
+.imdb_wrap{
+    margin-bottom: 10px;
+}
+
+.rateLabel>.fa-star{
+    color: #f8d40e;
+}
+
+.rating.fa.rateLabel{
+    border: #FFFFFF;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+    border-radius: 10%;
+    margin-top: 5px;
+}
+
+span.mpaa{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
 }
 
 /* END OF INFORMATION DIV*/

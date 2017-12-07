@@ -42,7 +42,18 @@ $(document).ready(function(){
         film_mpaa_span.innerHTML = object["Rated"];
 
         let film_countries_span = document.getElementsByClassName("countries")[0];
-        film_countries_span.innerHTML = object["Country"];
+        let film_countries_div = $('div.countries').get(0);
+        let countries = object["Country"].split(",");
+        for(let i=0;i<countries.length;i++){
+            if(i!=0){
+                film_countries_div.append(' و ')
+            }
+            let country_span=document.createElement("span");
+            country_span.innerHTML=countries[i];
+            film_countries_div.append(country_span);
+        }
+
+
 
         let film_story_div = document.getElementsByClassName("story")[0];
         film_story_div.innerHTML = object["Plot"];
