@@ -1,7 +1,7 @@
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
         results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
@@ -11,10 +11,51 @@ function getParameterByName(name, url) {
 function clickTab(clicked_tab){
     $(clicked_tab).addClass("active_item");
     $(clicked_tab).siblings().removeClass("active_item")
-    $('.content').get()[0].innerHTML="";
+    let aid = ($(clicked_tab).children().get(0).id);
+    $(".content.download_tab_content").hide();
+    $(".content.subtitle_tab_content").hide();
+    $(".content.comments_tab_content").hide();
+    $(".content.review_tab_content").hide();
+    $(".content.cast_tab_content").hide();
+    $(".content.award_tab_content").hide();
+    $(".content.gallery_tab_content").hide();
+    switch(aid){
+        case "download_tab":
+            $(".content.download_tab_content").show();
+            break;
+        case "subtitle_tab":
+            $(".content.subtitle_tab_content").show();
+            break;
+        case "comment_tab":
+            $(".content.comments_tab_content").show();
+            break;
+        case "review_tab":
+            $(".content.review_tab_content").show();
+            break;
+        case "cast_tab":
+            $(".content.cast_tab_content").show();
+            break;
+        case "awards_tab":
+            $(".content.award_tab_content").show();
+            break;
+        case "gallery_tab":
+            $(".content.gallery_tab_content").show();
+            break;
+        default:
+
+    }
+
+
 }
 
 $(document).ready(function(){
+
+        $(".content.subtitle_tab_content").hide();
+    $(".content.comments_tab_content").hide();
+    $(".content.review_tab_content").hide();
+    $(".content.cast_tab_content").hide();
+    $(".content.award_tab_content").hide();
+    $(".content.gallery_tab_content").hide();
 
 
     let imdbid = getParameterByName('id');
@@ -26,6 +67,7 @@ $(document).ready(function(){
         tabs_a[i].addEventListener("click",function () {
             clickTab(this);
         });
+
     }
 
 
