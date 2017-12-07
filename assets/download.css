@@ -330,7 +330,7 @@ a, a:visited{
 .film_description_div{
     background: blueviolet   ;
     min-height: 500px;
-    overflow:hidden
+    display: table;
 }
 
 .film_description_div>.container>.row{
@@ -338,6 +338,7 @@ a, a:visited{
 
 .cover{
     margin-top: -40px;
+    display: table-row;
 }
 
 .cover img{

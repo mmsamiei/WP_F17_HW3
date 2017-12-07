@@ -14,6 +14,10 @@ Add/Remove Items to OwlCarousel
 
 https://github.com/OwlCarousel2/OwlCarousel2/issues/339
 
+expanding a parent div to the height of its children
+
+https://stackoverflow.com/questions/384145/expanding-a-parent-div-to-the-height-of-its-children
+
 ## Important Point!
 jquery must has been linked before OWL!!!
 
